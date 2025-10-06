@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran Mahasiswa</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="form-header">
+                <div class="logo">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h1>Form Pendaftaran Mahasiswa</h1>
+                <p>Silakan lengkapi data diri Anda dengan benar</p>
+            </div>
+
+            <form id="registrationForm" class="registration-form">
+                <!-- Step Indicator -->
+                <div class="step-indicator">
+                    <div class="step active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span class="step-label">Data Pribadi</span>
+                    </div>
+                    <div class="step" data-step="2">
+                        <span class="step-number">2</span>
+                        <span class="step-label">Data Akademik</span>
+                    </div>
+                    <div class="step" data-step="3">
+                        <span class="step-number">3</span>
+                        <span class="step-label">Konfirmasi</span>
+                    </div>
+                </div>
+
+                <!-- Step 1: Data Pribadi -->
+                <div class="form-step active" id="step1">
+                    <h2><i class="fas fa-user"></i> Data Pribadi</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="namaLengkap">
+                                <i class="fas fa-user"></i>
+                                Nama Lengkap *
+                            </label>
+                            <input type="text" id="namaLengkap" name="namaLengkap" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="npm">
+                                <i class="fas fa-id-card"></i>
+                                NPM *
+                            </label>
+                            <input type="text" id="npm" name="npm" maxlength="8" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="tempatLahir">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Tempat Lahir *
+                            </label>
+                            <input type="text" id="tempatLahir" name="tempatLahir" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tanggalLahir">
+                                <i class="fas fa-calendar"></i>
+                                Tanggal Lahir *
+                            </label>
+                            <input type="date" id="tanggalLahir" name="tanggalLahir" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="jenisKelamin">
+                                <i class="fas fa-venus-mars"></i>
+                                Jenis Kelamin *
+                            </label>
+                            <select id="jenisKelamin" name="jenisKelamin" required>
+                                <option value="">Pilih Jenis Kelamin</option>
+                                <option value="Laki-laki">Laki-laki</option>
+                                <option value="Perempuan">Perempuan</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="agama">
+                                <i class="fas fa-pray"></i>
+                                Agama *
+                            </label>
+                            <select id="agama" name="agama" required>
+                                <option value="">Pilih Agama</option>
+                                <option value="Islam">Islam</option>
+                                <option value="Kristen">Kristen</option>
+                                <option value="Katolik">Katolik</option>
+                                <option value="Hindu">Hindu</option>
+                                <option value="Buddha">Buddha</option>
+                                <option value="Konghucu">Konghucu</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="alamat">
+                                <i class="fas fa-home"></i>
+                                Alamat Lengkap *
+                            </label>
+                            <textarea id="alamat" name="alamat" rows="3" required></textarea>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i>
+                                Email *
+                            </label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="telepon">
+                                <i class="fas fa-phone"></i>
+                                No. Telepon *
+                            </label>
+                            <input type="tel" id="telepon" name="telepon" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Data Akademik -->
+                <div class="form-step" id="step2">
+                    <h2><i class="fas fa-graduation-cap"></i> Data Akademik</h2>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="asalSekolah">
+                                <i class="fas fa-school"></i>
+                                Asal Sekolah *
+                            </label>
+                            <input type="text" id="asalSekolah" name="asalSekolah" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="jurusan">
+                                <i class="fas fa-book"></i>
+                                Jurusan Sekolah *
+                            </label>
+                            <input type="text" id="jurusan" name="jurusan" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="tahunLulus">
+                                <i class="fas fa-calendar-check"></i>
+                                Tahun Lulus *
+                            </label>
+                            <input type="number" id="tahunLulus" name="tahunLulus" min="2000" max="2030" required>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="nilaiUn">
+                                <i class="fas fa-chart-line"></i>
+                                Nilai UN/Rata-rata *
+                            </label>
+                            <input type="number" id="nilaiUn" name="nilaiUn" step="0.01" min="0" max="100" required>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fakultas">
+                                <i class="fas fa-university"></i>
+                                Fakultas Pilihan *
+                            </label>
+                            <select id="fakultas" name="fakultas" required>
+                                <option value="">Pilih Fakultas</option>
+                                <option value="Teknik">Fakultas Teknik</option>
+                                <option value="Ekonomi">Fakultas Ekonomi</option>
+                                <option value="Hukum">Fakultas Hukum</option>
+                                <option value="Kedokteran">Fakultas Kedokteran</option>
+                                <option value="MIPA">Fakultas MIPA</option>
+                                <option value="Sosial Politik">Fakultas Sosial Politik</option>
+                                <option value="Psikologi">Fakultas Psikologi</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="programStudi">
+                                <i class="fas fa-graduation-cap"></i>
+                                Program Studi *
+                            </label>
+                            <select id="programStudi" name="programStudi" required>
+                                <option value="">Pilih Program Studi</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="jalurMasuk">
+                                <i class="fas fa-route"></i>
+                                Jalur Masuk *
+                            </label>
+                            <select id="jalurMasuk" name="jalurMasuk" required>
+                                <option value="">Pilih Jalur Masuk</option>
+                                <option value="SNMPTN">SNMPTN</option>
+                                <option value="SBMPTN">SBMPTN</option>
+                                <option value="Mandiri">Ujian Mandiri</option>
+                                <option value="Transfer">Transfer</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="gelombang">
+                                <i class="fas fa-wave-square"></i>
+                                Gelombang *
+                            </label>
+                            <select id="gelombang" name="gelombang" required>
+                                <option value="">Pilih Gelombang</option>
+                                <option value="1">Gelombang 1</option>
+                                <option value="2">Gelombang 2</option>
+                                <option value="3">Gelombang 3</option>
+                            </select>
+                            <span class="error-message"></span>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-group full-width">
+                            <label for="motivasi">
+                                <i class="fas fa-lightbulb"></i>
+                                Motivasi Kuliah
+                            </label>
+                            <textarea id="motivasi" name="motivasi" rows="4" placeholder="Ceritakan motivasi Anda memilih program studi ini..."></textarea>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Konfirmasi -->
+                <div class="form-step" id="step3">
+                    <h2><i class="fas fa-check-circle"></i> Konfirmasi Data</h2>
+                    
+                    <div class="summary-card">
+                        <h3>Ringkasan Data Pendaftaran</h3>
+                        <div id="dataSummary"></div>
+                    </div>
+
+                    <div class="agreement">
+                        <label class="checkbox-container">
+                            <input type="checkbox" id="agreement" required>
+                            <span class="checkmark"></span>
+                            Saya menyatakan bahwa data yang saya isi adalah benar dan dapat dipertanggungjawabkan. Saya bersedia menerima sanksi apabila data yang saya berikan tidak sesuai dengan kenyataan.
+                        </label>
+                        <span class="error-message"></span>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="form-navigation">
+                    <button type="button" id="prevBtn" class="btn btn-secondary" style="display: none;">
+                        <i class="fas fa-arrow-left"></i> Sebelumnya
+                    </button>
+                    <button type="button" id="nextBtn" class="btn btn-primary">
+                        Selanjutnya <i class="fas fa-arrow-right"></i>
+                    </button>
+                    <button type="submit" id="submitBtn" class="btn btn-success" style="display: none;">
+                        <i class="fas fa-paper-plane"></i> Daftar Sekarang
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <i class="fas fa-check-circle success-icon"></i>
+                <h2>Pendaftaran Berhasil!</h2>
+            </div>
+            <div class="modal-body">
+                <p>Terima kasih telah mendaftar. Data Anda telah berhasil disimpan.</p>
+                <p>Silakan cek email Anda untuk informasi selanjutnya.</p>
+                <div class="registration-number">
+                    <strong>Nomor Pendaftaran: <span id="regNumber"></span></strong>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" onclick="closeModal()">
+                    <i class="fas fa-home"></i> Kembali ke Beranda
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
