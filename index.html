@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Mahasiswa - Portal Akademik</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Font Awesome untuk icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-left">
+            <button class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </button>
+            <h1 class="logo">
+                <i class="fas fa-graduation-cap"></i>
+                Portal Mahasiswa
+            </h1>
+        </div>
+        <div class="header-right">
+            <div class="notifications">
+                <i class="fas fa-bell"></i>
+                <span class="notification-badge">3</span>
+            </div>
+            <div class="user-info">
+                <span class="user-name">FAJAR BASIKAL</span>
+                <div class="user-avatar">
+                    <i class="fas fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <ul class="sidebar-menu">
+                <li class="menu-item active">
+                    <a href="#" class="menu-link">
+                        <i class="fas fa-home"></i>
+                        <span>Dashboard</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <i class="fas fa-user"></i>
+                        <span>form Mahasiswa</span>
+                    </a>
+                </li>
+                <li class="menu-item">
+                    <a href="#" class="menu-link">
+                        <i class="fas fa-calendar-alt"></i>
+                        <span>Jadwal Kuliah</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <div class="welcome-card">
+                    <div class="welcome-content">
+                        <h2>Selamat Datang, Fajar Basikal!</h2>
+                        <p>Semoga hari ini produktif dan menyenangkan untuk belajar</p>
+                    </div>
+                    <div class="welcome-time">
+                        <div class="time-info">
+                            <span class="current-time" id="currentTime"></span>
+                            <span class="current-date" id="currentDate"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Student Profile & Status Cards -->
+            <section class="profile-status-section">
+                <div class="profile-status-grid">
+                    <div class="profile-card">
+                        <div class="profile-header">
+                            <div class="profile-avatar">
+                                <i class="fas fa-user"></i>
+                            </div>
+                            <div class="profile-info">
+                                <h3>FAJAR BASIKAL</h3>
+                                <p>NIM: 2023010123</p>
+                                <p>Teknik Informatika - S1</p>
+                            </div>
+                        </div>
+                        <div class="profile-status">
+                            <span class="status-badge active">Status: Aktif</span>
+                        </div>
+                    </div>
+                    
+                    <div class="academic-stats">
+                        <div class="stat-item">
+                            <div class="stat-icon blue">
+                                <i class="fas fa-graduation-cap"></i>
+                            </div>
+                            <div class="stat-details">
+                                <h4>Semester</h4>
+                                <p>Semester 3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Today's Schedule & Quick Actions -->
+            <section class="schedule-actions-section">
+                <div class="schedule-actions-grid">
+                    <!-- Today's Schedule -->
+                    <div class="schedule-card">
+                        <h3><i class="fas fa-calendar-day"></i> Jadwal Hari Ini</h3>
+                        <div class="schedule-list">
+                            <div class="schedule-item">
+                                <div class="schedule-time">08:00 - 09:40</div>
+                                <div class="schedule-info">
+                                    <h4>Pemrograman Web</h4>
+                                    <p>Ruang Lab. Komputer 1</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">10:00 - 11:40</div>
+                                <div class="schedule-info">
+                                    <h4>Basis Data</h4>
+                                    <p>Ruang 201</p>
+                                </div>
+                            </div>
+                            <div class="schedule-item">
+                                <div class="schedule-time">13:00 - 14:40</div>
+                                <div class="schedule-info">
+                                    <h4>Matematika Diskrit</h4>
+                                    <p>Ruang 105</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="view-full-schedule">Lihat Jadwal Lengkap</button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Assignments & Announcements -->
+            <section class="assignments-announcements-section">
+                <div class="assignments-announcements-grid">
+                    <!-- Pending Assignments -->
+                    <div class="assignments-card">
+                        <h3><i class="fas fa-tasks"></i> Tugas & Deadline</h3>
+                        <div class="assignments-list">
+                            <div class="assignment-item urgent">
+                                <div class="assignment-info">
+                                    <h4>Project UAS - Pemrograman Web</h4>
+                                    <p>Deadline: Besok, 23:59</p>
+                                </div>
+                                <span class="priority-badge urgent">Urgent</span>
+                            </div>
+                            <div class="assignment-item medium">
+                                <div class="assignment-info">
+                                    <h4>Quiz Basis Data - Normalisasi</h4>
+                                    <p>Deadline: 3 hari lagi</p>
+                                </div>
+                                <span class="priority-badge medium">Medium</span>
+                            </div>
+                            <div class="assignment-item low">
+                                <div class="assignment-info">
+                                    <h4>Essay - Etika Profesi IT</h4>
+                                    <p>Deadline: 1 minggu lagi</p>
+                                </div>
+                                <span class="priority-badge low">Low</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Announcements -->
+                    <div class="announcements-card">
+                        <h3><i class="fas fa-bullhorn"></i> Pengumuman</h3>
+                        <div class="announcements-list">
+                            <div class="announcement-item">
+                                <div class="announcement-date">6 Okt 2025</div>
+                                <div class="announcement-content">
+                                    <h4>Perubahan Jadwal UTS</h4>
+                                    <p>UTS Mata Kuliah Pemrograman Web dipindah ke tanggal 15 Oktober 2025</p>
+                                </div>
+                            </div>
+                            <div class="announcement-item">
+                                <div class="announcement-date">5 Okt 2025</div>
+                                <div class="announcement-content">
+                                    <h4>Beasiswa Prestasi 2025</h4>
+                                    <p>Pendaftaran beasiswa prestasi dibuka hingga 20 Oktober 2025</p>
+                                </div>
+                            </div>
+                            <div class="announcement-item">
+                                <div class="announcement-date">4 Okt 2025</div>
+                                <div class="announcement-content">
+                                    <h4>Workshop Frontend Development</h4>
+                                    <p>Daftarkan diri untuk workshop gratis tentang React JS dan Vue JS</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Academic Progress & Recent Activity -->
+            <section class="progress-activity-section">
+                <div class="progress-activity-grid">
+                    <!-- Recent Activity -->
+                    <div class="activity-card">
+                        <h3><i class="fas fa-history"></i> Aktivitas Terbaru</h3>
+                        <div class="activity-list">
+                            <div class="activity-item">
+                                <div class="activity-icon submitted">
+                                    <i class="fas fa-paper-plane"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Tugas Dikumpulkan</h4>
+                                    <p>Quiz Basis Data - Normalisasi berhasil dikumpulkan</p>
+                                    <small>2 jam yang lalu</small>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon grade">
+                                    <i class="fas fa-star"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Nilai Baru</h4>
+                                    <p>Mendapat nilai A- untuk UTS Pemrograman Web</p>
+                                    <small>1 hari yang lalu</small>
+                                </div>
+                            </div>
+                            <div class="activity-item">
+                                <div class="activity-icon payment">
+                                    <i class="fas fa-credit-card"></i>
+                                </div>
+                                <div class="activity-content">
+                                    <h4>Pembayaran Berhasil</h4>
+                                    <p>SPP Semester 3 telah terbayar</p>
+                                    <small>3 hari yang lalu</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2025 Dashboard Form Mahasiswa. Semua hak cipta dilindungi.</p>
+    </footer>
+
+    <script>
+        // Simple menu toggle functionality
+        document.getElementById('menuToggle').addEventListener('click', function() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('sidebar-collapsed');
+        });
+
+        // Simple active menu handling
+        document.querySelectorAll('.menu-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelectorAll('.menu-item').forEach(item => {
+                    item.classList.remove('active');
+                });
+                this.parentElement.classList.add('active');
+            });
+        });
+
+        // Update current time and date
+        function updateDateTime() {
+            const now = new Date();
+            const timeOptions = { 
+                hour: '2-digit', 
+                minute: '2-digit', 
+                second: '2-digit',
+                hour12: false 
+            };
+            const dateOptions = { 
+                weekday: 'long', 
+                year: 'numeric', 
+                month: 'long', 
+                day: 'numeric' 
+            };
+            
+            document.getElementById('currentTime').textContent = now.toLocaleTimeString('id-ID', timeOptions);
+            document.getElementById('currentDate').textContent = now.toLocaleDateString('id-ID', dateOptions);
+        }
+
+        // Update time every second
+        updateDateTime();
+        setInterval(updateDateTime, 1000);
+    </script>
+</body>
+</html>
